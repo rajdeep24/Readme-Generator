@@ -8,8 +8,13 @@ const generateMarkDown = require("./utils/generateMarkdown");
 const questions = [
 	{
 		type: "input",
-		message: "What is the title of this readme?",
+		message: "What is the title of your application?",
 		name: "title",
+	},
+	{
+		type: "input",
+		message: "Describe your application",
+		name: "toc",
 	},
 	{
 		type: "input",
