@@ -14,20 +14,45 @@ const questions = [
 	{
 		type: "input",
 		message: "Describe your application",
-		name: "toc",
+		name: "description",
 	},
 	{
 		type: "input",
-		message: "Describe your application",
-		name: "description",
+		message: "What is the github pages url of your app?",
+		name: " githubUrl",
+	},
+	{
+		type: "input",
+		message: "What is the github repo url of your app?",
+		name: "githubRepo",
+	},
+	{
+		type: "input",
+		message: "What steps did you take to install your application?",
+		name: "installation",
+	},
+	{
+		type: "input",
+		message: "Describe how to use your application.",
+		name: "usage",
+	},
+	{
+		type: "input",
+		message: "List the who contributed to building this application",
+		name: "contribution",
+	},
+	{
+		type: "input",
+		message: "What is your github username?",
+		name: "github",
 	},
 ];
 
 // function to write README file
 function writeToFile(data) {
-	fs.writeFile("./output/readme.md", data, function () {
-    if (err) throw err; 
-    console.log("Successfully created readme.md!")
+	fs.writeFile("./output/readme.md", data, function (err) {
+		if (err) throw err;
+		console.log("Successfully created readme.md!");
 	});
 }
 
